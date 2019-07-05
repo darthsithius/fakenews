@@ -1,0 +1,27 @@
+{% load static%}
+
+
+<html>
+<head>
+    <link href="{% static 'detection/css/googleapis.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'detection/css/newspaper.css' %}">
+    <title>Fake News Detection</title>
+    <meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+<div class="head">
+    <div class="headerobjectswrapper">
+        <div class="weatherforcastbox"><span style="font-style: italic;">Weatherforcast for the next 24 hours: The world is going to end</span><br><span>Wind: 7000km/h SSE; Ther: 20001°C; Hum: 8912%</span></div>
+        <header>Check Fake News</header>
+    </div>
+
+    <div class="subhead">
+		<h2>The article is {{pred}} with a prediction accuracy of {{prob}} </h2>
+	</div>
+</div>
+        	<h1>The article text is </h1>
+            <p>{{restext}}</p>
+
+</body>
+</html>

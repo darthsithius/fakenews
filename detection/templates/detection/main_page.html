@@ -1,0 +1,109 @@
+{% load static%}
+
+
+<html>
+<head>
+    <link href="{% static 'detection/css/googleapis.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'detection/css/newspaper.css' %}">
+    <title>Fake News Detection</title>
+    <meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+<div class="head">
+    <div class="headerobjectswrapper">
+        <div class="weatherforcastbox"><span style="font-style: italic;">Weatherforcast for the next 24 hours: The world is going to end</span><br><span>Wind: 7000km/h SSE; Ther: 20001°C; Hum: 8912%</span></div>
+        <header>Check Fake News</header>
+    </div>
+
+    <div class="subhead">
+
+	<form method="POST" action="">
+		{% csrf_token %}
+		<input type="text" name="url" id="url" placeholder="Enter url to check" style="width: 300px">
+		<button class="btn btn-1 btn-1f" id="myBtn">Check</button>
+	</form>
+	
+	</div>
+</div>
+<div class="content">
+    <div class="collumns">
+        <div class="collumn">
+            <div class="head"><span class="headline hl3">What is Fake News</span><p><span class="headline hl4">Definition</span></p></div>
+            Fake news, also known as junk news or pseudo-news, is a type of yellow journalism or propaganda that consists of deliberate disinformation or hoaxes spread via traditional news media (print and broadcast) or online social media.The false information is often caused by reporters paying sources for stories, an unethical practice called checkbook journalism. Digital news has brought back and increased the usage of fake news, or yellow journalism.The news is then often reverberated as misinformation in social media but occasionally finds its way to the mainstream media as well.</p></div>
+        
+
+
+
+        <div class="collumn">
+            <div class="head"><span class="headline hl5">Fake News Detection</span><p><span class="headline hl6">The Need</span></p></div>
+            The rapid growth of fake news, especially in social media has become a challenging
+			problem that has negative social impacts on a global scale. In contrast to fake news which intends
+			to deceive and manipulate the reader, satirical stories are designed to entertain the reader by
+			ridiculing or criticizing a social figure. Due to its serious threats of misleading information,
+			researchers, governments, journalists and fact- checking volunteers are working together to
+			address the fake news issue and increase the accountability of digital media. The automatic fake
+			news detection systems enable identification of deceptive news. Low accuracy remains the main
+			drawback of these systems.</p>
+			</div>
+        
+
+
+
+        <div class="collumn"><div class="head"><span class="headline hl1">Methodology</span><p><span class="headline hl2">Machine Learning,NLP</span></p></div>This project explores the application of natural language processing and Machine
+Learning techniques for the detection of `fake news'. </p>
+	<figure class="figure">
+								<img class="media" src="{% static 'detection/images/repost.gif' %}" alt="">
+								<figcaption class="figcaption">"mfw i see fake news"</figcaption>
+						</figure>
+            <p>We used dataset obtained from Kaggle and a list of sources from OpenSources.co, we
+				applied term frequency-inverse document frequency (TF-IDF) of bi-grams and Count
+				Vectorizer to a corpus of about 20000 articles for feature extraction. <span class="citation">"Fake News Bad"</span> We trained 5 different
+				models for the accumulated data set and found that Logistic regression was the better of all with
+				an accuracy of 85%. By adding additional features like click-bait analysis and publisher rating,
+				models efficiency was increased to 88%.</p>
+           </div>
+        
+
+
+
+
+
+        <div class="collumn"><div class="head"><span class="headline hl3">Graphs</span><p><span class="headline hl4">For each algorithm</span></p></div><p></p>
+        	<figure class="figure">
+					<img class="media" src="{% static 'detection/images/first.jpeg' %}" alt="">
+					<figcaption class="figcaption">"Logistic regression"</figcaption>
+			</figure>
+
+        	<figure class="figure">
+					<img class="media" src="{% static 'detection/images/second.jpeg' %}" alt="">
+					<figcaption class="figcaption">"SVM"</figcaption>
+			</figure>
+			        	<figure class="figure">
+					<img class="media" src="{% static 'detection/images/third.jpeg' %}" alt="">
+					<figcaption class="figcaption">"Statistic Gradient Descent"</figcaption>
+			</figure>
+			        	<figure class="figure">
+					<img class="media" src="{% static 'detection/images/fourth.jpeg' %}" alt="">
+					<figcaption class="figcaption">"Naive Bayes"</figcaption>
+			</figure>
+			        	<figure class="figure">
+					<img class="media" src="{% static 'detection/images/first.jpeg' %}" alt="">
+					<figcaption class="figcaption">"Random Forest"</figcaption>
+			</figure>			
+        </div>
+
+
+
+
+
+
+
+
+        <div class="collumn"><div class="head"><span class="headline hl1">Final Year Project</span><p><span class="headline hl4">Done By</span></p></div><p>Harshith TR <br>Karthik LN <br>Manish K <br>Mohammad Zaman <br><br><br> UNDER THE GUIDANCE OF <br> <b>Mrs.Vidya R Pai<b></p>
+		</div>
+    </div>
+</div>
+
+</body>
+</html>
